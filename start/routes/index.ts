@@ -4,4 +4,5 @@ Route.get('/', async () => {
   return { hello: 'world ' }
 })
 
-Route.resource('/posts', 'PostsController').apiOnly()
+Route.post('/auth', 'AuthController.store')
+Route.delete('/auth', 'AuthController.destroy')
